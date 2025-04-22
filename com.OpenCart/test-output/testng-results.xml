@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-15T14:31:58 IST" name="Suite" finished-at="2024-11-15T14:33:01 IST" duration-ms="62909">
+  <suite started-at="2025-03-11T23:06:38 IST" name="Suite" finished-at="2025-03-11T23:07:22 IST" duration-ms="43840">
     <groups>
-      <group name="regration">
-        <method signature="Tc001_AccountRegistationTest.Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@7e3181aa]" name="Varify_Account_Registation" class="testCases.Tc001_AccountRegistationTest"/>
-        <method signature="Tc001_AccountRegistationTest.Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@13d9b21f]" name="Varify_Account_Registation" class="testCases.Tc001_AccountRegistationTest"/>
-        <method signature="Tc001_AccountRegistationTest.Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@62727399]" name="Varify_Account_Registation" class="testCases.Tc001_AccountRegistationTest"/>
-      </group> <!-- regration -->
+      <group name="sanity">
+        <method signature="Tc004_Forgot_Password_Functinality.varified_forgot_functinality()[pri:0, instance:testCases.Tc004_Forgot_Password_Functinality@16414e40]" name="varified_forgot_functinality" class="testCases.Tc004_Forgot_Password_Functinality"/>
+      </group> <!-- sanity -->
       <group name="master">
-        <method signature="Tc001_AccountRegistationTest.Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@7e3181aa]" name="Varify_Account_Registation" class="testCases.Tc001_AccountRegistationTest"/>
-        <method signature="Tc001_AccountRegistationTest.Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@13d9b21f]" name="Varify_Account_Registation" class="testCases.Tc001_AccountRegistationTest"/>
-        <method signature="Tc001_AccountRegistationTest.Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@62727399]" name="Varify_Account_Registation" class="testCases.Tc001_AccountRegistationTest"/>
+        <method signature="Tc004_Forgot_Password_Functinality.varified_forgot_functinality()[pri:0, instance:testCases.Tc004_Forgot_Password_Functinality@16414e40]" name="varified_forgot_functinality" class="testCases.Tc004_Forgot_Password_Functinality"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2024-11-15T14:31:58 IST" name="chromeTest" finished-at="2024-11-15T14:32:24 IST" duration-ms="25841">
-      <class name="testCases.Tc001_AccountRegistationTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.Tc001_AccountRegistationTest@7e3181aa]" started-at="2024-11-15T14:31:58 IST" name="setUp" finished-at="2024-11-15T14:32:07 IST" duration-ms="8571" status="PASS">
+    <test started-at="2025-03-11T23:06:38 IST" name="master.xml" finished-at="2025-03-11T23:07:22 IST" duration-ms="43840">
+      <class name="testCases.Tc004_Forgot_Password_Functinality">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.Tc004_Forgot_Password_Functinality@16414e40]" started-at="2025-03-11T23:06:39 IST" name="setUp" finished-at="2025-03-11T23:06:52 IST" duration-ms="12921" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@7e3181aa]" started-at="2024-11-15T14:32:07 IST" name="Varify_Account_Registation" finished-at="2024-11-15T14:32:14 IST" duration-ms="6843" status="FAIL">
+        <test-method signature="varified_forgot_functinality()[pri:0, instance:testCases.Tc004_Forgot_Password_Functinality@16414e40]" started-at="2025-03-11T23:06:52 IST" name="varified_forgot_functinality" finished-at="2025-03-11T23:07:22 IST" duration-ms="30088" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -42,7 +38,7 @@
               <![CDATA[java.lang.AssertionError: null
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.fail(Assert.java:116)
-at testCases.Tc001_AccountRegistationTest.Varify_Account_Registation(Tc001_AccountRegistationTest.java:39)
+at testCases.Tc004_Forgot_Password_Functinality.varified_forgot_functinality(Tc004_Forgot_Password_Functinality.java:36)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -57,51 +53,29 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Varify_Account_Registation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.Tc001_AccountRegistationTest@7e3181aa]" started-at="2024-11-15T14:32:21 IST" name="tearDown" finished-at="2024-11-15T14:32:24 IST" duration-ms="2251" status="PASS">
+        </test-method> <!-- varified_forgot_functinality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.Tc004_Forgot_Password_Functinality@16414e40]" started-at="2025-03-11T23:07:22 IST" name="tearDown" finished-at="2025-03-11T23:07:22 IST" duration-ms="350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.Tc001_AccountRegistationTest -->
-    </test> <!-- chromeTest -->
-    <test started-at="2024-11-15T14:31:58 IST" name="edgeTest" finished-at="2024-11-15T14:33:01 IST" duration-ms="62909">
-      <class name="testCases.Tc001_AccountRegistationTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.Tc001_AccountRegistationTest@62727399]" started-at="2024-11-15T14:31:58 IST" name="setUp" finished-at="2024-11-15T14:32:28 IST" duration-ms="29486" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Varify_Account_Registation()[pri:0, instance:testCases.Tc001_AccountRegistationTest@62727399]" started-at="2024-11-15T14:32:28 IST" name="Varify_Account_Registation" finished-at="2024-11-15T14:32:59 IST" duration-ms="31811" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Varify_Account_Registation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.Tc001_AccountRegistationTest@62727399]" started-at="2024-11-15T14:32:59 IST" name="tearDown" finished-at="2024-11-15T14:33:01 IST" duration-ms="1449" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.Tc001_AccountRegistationTest -->
-    </test> <!-- edgeTest -->
+      </class> <!-- testCases.Tc004_Forgot_Password_Functinality -->
+    </test> <!-- master.xml -->
   </suite> <!-- Suite -->
 </testng-results>

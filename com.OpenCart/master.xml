@@ -8,9 +8,10 @@
 	<parameter name="os" value="windows"></parameter>
 	<parameter name="browser" value="chrome"></parameter>
     <classes>
-        <class name="testCases.Tc001_AccountRegistationTest"/>
+        
         <class name="testCases.Tc002_LoginTest"/>
        <!--   <class name="testCases.Tc003LoginDDT"/>-->
+       <class name="testCases.Tc004_Forgot_Password_Functinality"/>
     </classes>
   </test> <!-- master.xml -->
 </suite> <!-- Suite -->

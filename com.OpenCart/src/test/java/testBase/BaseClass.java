@@ -19,8 +19,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,7 +30,7 @@ public class BaseClass {
 	public  Logger logger;
 	public Properties p;
 	@Parameters({"os","browser"})
-	@BeforeClass(groups={"sanity","regration","master"})
+	@BeforeMethod(groups={"sanity","regration","master"})
 	public void setUp(String os,String br) throws IOException
 	{
 		//reading properties file data to load the properties file
@@ -93,7 +93,7 @@ public class BaseClass {
 		//driver.manage().deleteAllCookies();
 	}
 	}
-	@AfterClass(groups={"sanity","regration","master"})
+	@AfterMethod(groups={"sanity","regration","master"})
 	public void tearDown()
 	{
 		driver.quit();
