@@ -1,10 +1,6 @@
 package utilities;
 
 
-import java.awt.Desktop;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +14,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import testBase.BaseClass;
 
 public class ExtentReportsManager implements ITestListener {
@@ -32,7 +30,7 @@ public class ExtentReportsManager implements ITestListener {
 		 * SimpleDateFormat df =new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 		Date d =new Date();
 		String currentdatetimeStamp=df.format(d);*/
-		 
+
 		String timestamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		repName ="Test-Report-" + timestamp + ".html";
 		sparkReporter=new ExtentSparkReporter(".\\reports\\"+"repName");// specify the current location of the report
@@ -81,7 +79,7 @@ public class ExtentReportsManager implements ITestListener {
 		{
 			e1.printStackTrace();
 		}
-		
+
 	}
 	// method 4
 	public void onTestSkipped(ITestResult result)
@@ -95,14 +93,15 @@ public class ExtentReportsManager implements ITestListener {
 	public void onFinish(ITestContext testContext)
 	{
 		extent.flush();
-		String pathOfExtentReoprt=System.getProperty("Users.dir")+"\\reports\\"+repName;
-		File extentReport=new File(pathOfExtentReoprt);
-		try {
-			Desktop.getDesktop().browse(extentReport.toURI());
-	// these code is automatic present report after complete the execution in display 
-		} catch (IOException e) {
 
-			e.printStackTrace();
-		}
-	}
-}
+//				String pathOfExtentReoprt=System.getProperty("user.dir")+"\\reports\\"+repName;
+//				File extentReport=new File(pathOfExtentReoprt);
+//				try {
+//					Desktop.getDesktop().browse(extentReport.toURI());
+//			// these code is automatic present report after complete the execution in display 
+//				} catch (IOException e) {
+//		
+//					e.printStackTrace();
+//				}
+			
+	}}

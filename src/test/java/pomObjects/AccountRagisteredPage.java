@@ -23,10 +23,12 @@ public class AccountRagisteredPage
 	@FindBy(xpath="//input[@id='input-firstname']") private WebElement txtfirstname;
 	@FindBy(xpath="//input[@id='input-lastname']") private WebElement txtlastname;
 	@FindBy(xpath="//input[@id='input-email']") private WebElement txtemail;
+	@FindBy(xpath="//input[@id='input-telephone']") private WebElement telephone;
 	@FindBy(xpath="//input[@id='input-password']") private WebElement txtpassword;
-	@FindBy(xpath="//input[@id='input-newsletter']") private WebElement ckckdSubscribe;
+	@FindBy(xpath="//input[@id='input-confirm']") private WebElement confirmPass;
+	//@FindBy(xpath="//input[@name='newsletter']") private  WebElement ckckdSubscribe;
 	@FindBy(xpath="//input[@name='agree']") private WebElement ckcbpolicy;
-	@FindBy(xpath="//button[@type='submit']") private WebElement BtnContine;
+	@FindBy(xpath="//input[@type='submit']") private WebElement BtnContine;
 	@FindBy(xpath="//h1[text()='Your Account Has Been Created!']") private WebElement CfmMassge;
 	
 	//action method
@@ -44,15 +46,24 @@ public class AccountRagisteredPage
 	{
 		txtemail.sendKeys(email);
 	}
-
+	public void set_telephone(String phone)
+	{
+		telephone.sendKeys(phone);
+	}
+	
 	public void setPassword(String pass)
 	{
 		txtpassword.sendKeys(pass);
 	}
 
-	public void ClickSubscibeBox()
+	public void setconfirmPassword(String pass)
 	{
-		ckckdSubscribe.click();
+		confirmPass.sendKeys(pass);
+	}
+
+	public void ClickSubscibeBox(String a)
+	{
+		
 	}
 
 	public void setkPolicy()

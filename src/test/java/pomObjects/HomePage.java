@@ -18,9 +18,12 @@ public class HomePage
 	}
 	//webeelements
 
-	@FindBy(xpath="//span[normalize-space()='My Account']")private WebElement MyAccount;
-	@FindBy(xpath="//a[normalize-space()='Register']")private WebElement Register;
-	@FindBy(xpath="//a[normalize-space()='Login']")private WebElement Login;
+	//@FindBy(xpath="//span[normalize-space()='My Account']")private WebElement MyAccount;
+	@FindBy(xpath="	//span[text()='My Account']")private WebElement MyAccount;
+	//@FindBy(xpath="//a[normalize-space()='Register']")private WebElement Register;
+	@FindBy(xpath="//ul//a[text()='Register']")private WebElement Register;
+	//@FindBy(xpath="//a[normalize-space()='Login']")private WebElement Login;
+	@FindBy(xpath="//ul//a[text()='Login']")private WebElement Login;
 
 	// action methods 
 	public void click_MyAccount()

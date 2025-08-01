@@ -19,8 +19,14 @@ public class LoginPage {
 	//webElement
 	@FindBy(xpath="//input[@id='input-email']") private WebElement email;
 	@FindBy(xpath="//input[@id='input-password']") private WebElement password;
-	@FindBy(xpath="//button[@type='submit']") private WebElement loginclk;
-	@FindBy(xpath="//div[@class='mb-3']//a[normalize-space()='Forgotten Password']") private WebElement forgotPassword;
+	@FindBy(xpath="//input[@type='submit']") private WebElement loginclk;
+	
+	@FindBy(xpath="//div[@class='form-group']//a[text()='Forgotten Password']") private WebElement forgotPassword;
+	@FindBy(xpath="//div[text()='An email with a confirmation link has been sent your email address.']")
+	private WebElement mailConfAlertMsg;
+	@FindBy(xpath="//div[text()='Warning: The E-Mail Address was not found in our records, please try again!']")
+	private WebElement mailConfWarningMsg;
+	
 	
 	//action method
 	public void sendEmail(String e)
@@ -41,5 +47,16 @@ public class LoginPage {
 	public void clickLnkForgotPass()
 	{
 		forgotPassword.click();
+	}
+
+	public String getConfirMsg()
+	{
+		String confmsg=mailConfAlertMsg.getText();
+		return confmsg;
+	}
+	public String getWarningMsg()
+	{
+		String warnmsg=mailConfWarningMsg.getText();
+		return warnmsg;
 	}
 }

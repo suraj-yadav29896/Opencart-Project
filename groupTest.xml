@@ -7,6 +7,9 @@
 			<include name="regration"/>-->
 			<include name="master"/>
 		 <!-- 	<exclude name=""/>	-->
+		 <!--suppose test case both belong sanity and regartion
+		 but i have run purly belong to sanity that time specify the
+		  iclude tag in sanity and exclude tag regration -->
 		</run>
 	</groups>
 	<listeners>

@@ -17,7 +17,7 @@ public class Tc001_AccountRegistationTest extends BaseClass{
 			hp.click_MyAccount();
 			logger.info("***********click on my account link**********");
 			
-			hp.click_MyAccount();
+			//hp.click_MyAccount();
 			hp.click_Register();
 			logger.info("***********click on ragistered link**********");
 			AccountRagisteredPage Ap =new AccountRagisteredPage(driver);
@@ -25,7 +25,10 @@ public class Tc001_AccountRegistationTest extends BaseClass{
 			Ap.setFirstName(randomstring().toUpperCase());
 			Ap.setLastName(randomstring().toUpperCase());
 			Ap.setEmail(randomstring().toUpperCase()+"@gmail.com");
-			Ap.setPassword("roshan1234");
+			Ap.set_telephone(randomNumber());
+			String password=randomAlphaNumric();
+			Ap.setPassword(password);
+			Ap.setconfirmPassword(password);
 			Ap.setkPolicy();
 			Ap.OtherOpt_BtnClick();
 			logger.info("*********start the validation of users*********");

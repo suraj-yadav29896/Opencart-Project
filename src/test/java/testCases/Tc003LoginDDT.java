@@ -19,6 +19,8 @@ import utilities.DataProviders;
 public class Tc003LoginDDT extends BaseClass{
 
 	@Test (dataProvider="LoginData",dataProviderClass=DataProviders.class,groups="master")
+	//when dataprovider method in same class the no need for taking dataprovider class
+	//but data provider class is in differant location(differant package and class) the provide the name oof class
 	public void varify_LoginDDT(String email,String pass,String exp)
 	{
 		logger.info("**********start test case Tc003LoginDDT *********");
@@ -26,7 +28,7 @@ public class Tc003LoginDDT extends BaseClass{
 			//HomePgae
 			HomePage hp=new HomePage(driver);
 			hp.click_MyAccount();
-			hp.click_MyAccount();
+			//hp.click_MyAccount();
 			hp.click_Login();
 			//LoginPage
 			LoginPage lp=new LoginPage(driver);
@@ -37,6 +39,13 @@ public class Tc003LoginDDT extends BaseClass{
 			MyAccount_Page map=new MyAccount_Page(driver);
 			boolean actual=map.ismyaccount_pageHaeding();
 
+			/* Data is valid - login success - test pass - logout
+			 * Data is valid - login failed  -test failed
+			 
+			  Data is invalid -login success - test failed -logout
+			  Data is invalid -login failed - test passed 
+			 
+			 */
 			if(exp.equalsIgnoreCase("valid"))
 			{
 				if(actual==true)

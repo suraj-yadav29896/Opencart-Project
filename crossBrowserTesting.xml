@@ -19,12 +19,14 @@
       <class name="testCases.Tc001_AccountRegistationTest"/>
     </classes>
   </test> <!-- master.xml -->
-  
+  </suite> <!-- Suite -->
+  <!--
   <test  name="edgeTest">
 	<parameter name="os" value="windows"></parameter>
 	<parameter name="browser" value="edge"></parameter>
     <classes>
       <class name="testCases.Tc001_AccountRegistationTest"/>
-    </classes>
-  </test> <!-- master.xml -->
-</suite> <!-- Suite -->
+    </classes>-->
+  
+
+

@@ -1,8 +1,8 @@
-package utilities;
-
-import java.io.IOException;
+ package utilities;
 
 import org.testng.annotations.DataProvider;
+
+import java.io.IOException;
 
 
 public class DataProviders {
@@ -23,6 +23,7 @@ public class DataProviders {
 		for (int i=1;i<=totalRows;i++)//read the data from xl storing in two dimension array
 			// 1 is taking because 0 index is data heading is present
 		{
+			// Outer for loop represent the Row and innner loop represent the column
 			for(int j=0; j<totalcols;j++)//0 i is the row and j is the column
 			{
 				loginData[i-1][j]=xlutility.getcellData("Sheet1", i, j);// 1,0

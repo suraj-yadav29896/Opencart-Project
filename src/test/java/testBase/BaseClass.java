@@ -1,15 +1,11 @@
 package testBase;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -22,8 +18,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
 public class BaseClass {
 
 	public static WebDriver driver;
@@ -43,7 +44,8 @@ public class BaseClass {
 		logger.info("***********start the browser lounching**********");
 //==========================================================================================		
 		// setup remote execution
-		if(p.getProperty("execution_env").equalsIgnoreCase(os))
+	
+		if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			//Operating system
@@ -67,7 +69,7 @@ public class BaseClass {
 			default : System.out.println("no matching browser");return;
 			}
 
-			driver = new RemoteWebDriver(new URL(""),capabilities);
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
 		} 
 //===========================================================================
 		// setup local execution

@@ -4,13 +4,16 @@
 	<listeners>
 		<listener class-name="utilities.ExtentReportsManager"/>
 	</listeners>
-  <test thread-count="5" name="master.xml">
+  <test thread-count="5" name="Test">
 	<parameter name="os" value="windows"></parameter>
 	<parameter name="browser" value="chrome"></parameter>
     <classes>
-        <class name="testCases.Tc001_AccountRegistationTest"/>
-        <class name="testCases.Tc002_LoginTest"/>
-       <!--   <class name="testCases.Tc003LoginDDT"/>-->
+     
+       <class name="testCases.Tc001_AccountRegistationTest"/>
+     <class name="testCases.Tc002_LoginTest"/>
+     <!--   <class name="testCases.Tc003LoginDDT"/>-->
+      <class name="testCases.Tc004_ForgotPasswordFunctinalityTest"/>
+     
     </classes>
-  </test> <!-- master.xml -->
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
